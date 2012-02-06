@@ -2,10 +2,9 @@
 
 namespace ZfcUserAcl\Listener;
 
-use ZfcUserAcl\Module as ZfcUserAcl,
-    ZfcUserAcl\Di\ZfcUserAclAware;
+use ZfcUserAcl\Module as ZfcUserAcl;
 
-class MvcDispatchListener implements ZfcUserAclAware
+class MvcDispatchListener
 {
     protected $aclService;
 
