@@ -2,7 +2,8 @@
 
 namespace ZfcUserAcl\Listener;
 
-use ZfcUserAcl\Module as ZfcUserAcl;
+use ZfcUserAcl\Module as ZfcUserAcl,
+    ZfcUserAcl\Di\ZfcUserAclAware;
 
 class MvcDispatchListener implements ZfcUserAclAware
 {
@@ -12,7 +13,7 @@ class MvcDispatchListener implements ZfcUserAclAware
 
     public function __construct(ZfcUserAcl $module)
     {
-        // this is NULL. it should be 'ZfcUserAcl\Model\RoleBase'
+        // if this is 'ZfcUserAcl\Model\RoleBase', it worked!
         var_dump($module->getOption('role_model_class'));die(); // NULL
         $this->module = $module;
     }

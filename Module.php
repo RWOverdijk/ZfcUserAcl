@@ -4,9 +4,10 @@ namespace ZfcUserAcl;
 
 use Zend\Module\Manager,
     Zend\EventManager\StaticEventManager,
-    Zend\Module\Consumer\AutoloaderProvider;
+    Zend\Module\Consumer\AutoloaderProvider,
+    Zend\Module\Consumer\LocatorRegistered;
 
-class Module implements AutoloaderProvider
+class Module implements AutoloaderProvider, LocatorRegistered
 {
     protected $options;
 
